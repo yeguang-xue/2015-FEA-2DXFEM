@@ -1,8 +1,11 @@
-%% Cleaning
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Note: This program is just used to test standard FEA during development
+% Author: Yeguang Xue (Northwestern Univ)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-clear
-clc
+clear, clc
 
+%% Mesh Preprocessing
 nx = 11;
 ny = 11;
 nxel = nx -1;
@@ -14,7 +17,6 @@ num_elements = nxel*nyel;
 nodes_container = NodeArrayClass(num_nodes);
 elements_container = ElementArrayClass(num_elements);
 
-%% Mesh Preprocessing
 
 rho = 1;
 youngs = 1;
