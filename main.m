@@ -1,4 +1,4 @@
-%% Cleaning
+%% Preprocessing
 
 clear
 clc
@@ -93,7 +93,7 @@ for j=1:ny
     bcid = bcid +1;
 end
 
-%% Test 
+%% Simulation 
 
 K = modelmesh.build_stiff_matrix();
        
@@ -105,5 +105,5 @@ d = K_modify\f_modify;
 
 modelmesh.AssignResults(d);
 
-modelmesh.outputVtk('test_undeformed.vtk','UNDEFORMED');
-modelmesh.outputVtk('test_deformed.vtk','DEFORMED');
+modelmesh.outputVtk('output_undeformed.vtk','UNDEFORMED');
+modelmesh.outputVtk('output_deformed.vtk','DEFORMED');
